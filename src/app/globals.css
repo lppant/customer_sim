@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Editorial & Forest / Emerald Green Design System Tokens */
+  --bg-canvas: #F8FAF8;
+  --bg-surface: #FFFFFF;
+  --bg-sunken: #F0F4F1;
+  --bg-subtle: #E6ECE7;
+  
+  --ink-primary: #121A15;
+  --ink-secondary: #23332B;
+  --ink-tertiary: #4A5E52;
+  --ink-muted: #738A7C;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --emerald-main: #059469;
+  --emerald-dark: #0D5C3A;
+  --emerald-light: #10B981;
+  --emerald-soft: #ECFDF5;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --amber-found: #D97706;
+  --amber-ink: #92400E;
+  --amber-soft: #FEF3C7;
+
+  --border-subtle: #E2E8E2;
+  --border-strong: #C8D6C9;
+  --border-focus: #059469;
+
+  --card-shadow: 0 1px 3px 0 rgba(18, 26, 21, 0.04), 0 4px 12px -2px rgba(18, 26, 21, 0.05);
+  --card-shadow-hover: 0 4px 6px -1px rgba(18, 26, 21, 0.06), 0 12px 24px -4px rgba(18, 26, 21, 0.08);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle Editorial Canvas Dot Pattern */
+.editorial-canvas {
+  background-color: var(--bg-canvas);
+  background-image: radial-gradient(rgba(5, 148, 105, 0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Monospace Pill */
+.frase-pill {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-sunken);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DDD6FE;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A78BFA;
+}
+
+.editorial-border {
+  border-color: var(--border-subtle);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
