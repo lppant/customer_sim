@@ -28,7 +28,7 @@ export default function HomePage() {
             <div className="lg:col-span-7 space-y-6">
 
               <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-[#121A15] leading-[1.08]">
-                Multimodal Customer Simulation for{' '}
+                Customer Simulation for{' '}
                 <span className="text-[#059469] inline-block underline decoration-emerald-300 underline-offset-8">
                   Banking Products.
                 </span>
